@@ -1,0 +1,39 @@
+:root {
+  --navy: #0a0e27;
+  --navy-2: #10153a;
+  --black: #080a10;
+  --gold: #c9a876;
+  --gold-soft: #dcc39e;
+  --gold-deep: #8a6a3c;
+  --ivory: #f7f5f0;
+  --ivory-2: #efebe2;
+  --grey: #a4a6b3;
+  --ink: #14172b;
+  --ink-muted: #565a6b;
+  --border-gold: rgb(201 168 118 / 0.22);
+  --border-light: rgb(247 245 240 / 0.1);
+  --border-dark: rgb(10 14 39 / 0.12);
+  --error: #e08a7c;
+  --error-dark: #a3392c;
+  --success: #9cc6a8;
+
+  --font-serif: 'Playfair Display', 'Didot', 'Bodoni 72', Georgia, serif;
+  --font-sans: 'Inter', 'Helvetica Neue', system-ui, -apple-system, sans-serif;
+
+  --fs-h1: clamp(2.75rem, 1.4rem + 5vw, 6.25rem);
+  --fs-h2: clamp(2.2rem, 1.5rem + 2.6vw, 4rem);
+  --fs-h3: clamp(1.4rem, 1.2rem + 0.7vw, 1.75rem);
+  --fs-lead: clamp(1.08rem, 1rem + 0.35vw, 1.25rem);
+
+  --section-y: clamp(5.5rem, 4rem + 6vw, 10.5rem);
+  --gutter: clamp(1rem, 0.4rem + 3vw, 3.5rem);
+  --container: 1280px;
+  --header-h: 88px;
+
+  --radius: 20px;
+  --radius-sm: 12px;
+  --pill: 9999px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-io: cubic-bezier(0.65, 0, 0.35, 1);
+  --shadow-deep: 0 40px 80px -40px rgb(0 0 0 / 0.7), 0 1px 0 rgb(247 245 240 / 0.04) inset;
+}
