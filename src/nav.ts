@@ -4,7 +4,7 @@ export function initHeader(): void {
   const header = document.querySelector<HTMLElement>('[data-header]');
   if (!header) return;
 
-  const update = () => header.classList.toggle('is-scrolled', window.scrollY > 40);
+  const update = () => header.classList.toggle('is-scrolled', window.scrollY > 24);
   update();
   window.addEventListener('scroll', update, { passive: true });
 }
@@ -15,6 +15,7 @@ export function initMobileNav(): void {
   const menu = document.querySelector<HTMLElement>('[data-nav-menu]');
   if (!header || !toggle || !menu) return;
 
+  const label = toggle.querySelector<HTMLElement>('.nav__toggle-label');
   const desktop = window.matchMedia(DESKTOP_QUERY);
 
   const focusables = () =>
@@ -25,6 +26,7 @@ export function initMobileNav(): void {
   const setOpen = (open: boolean, restoreFocus = false) => {
     toggle.setAttribute('aria-expanded', String(open));
     toggle.setAttribute('aria-label', open ? 'Zavrieť menu' : 'Otvoriť menu');
+    if (label) label.textContent = open ? 'Zavrieť' : 'Menu';
     menu.classList.toggle('is-open', open);
     header.classList.toggle('is-menu-open', open);
     document.body.classList.toggle('is-menu-open', open);
@@ -35,6 +37,7 @@ export function initMobileNav(): void {
     }
   };
 
+  toggle.setAttribute('aria-label', 'Otvoriť menu');
   toggle.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true'));
 
   menu.addEventListener('click', (event) => {
